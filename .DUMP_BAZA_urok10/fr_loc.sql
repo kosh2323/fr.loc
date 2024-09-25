@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: MariaDB-11.2
--- Время создания: Сен 22 2024 г., 17:33
+-- Время создания: Сен 25 2024 г., 16:35
 -- Версия сервера: 11.2.2-MariaDB
 -- Версия PHP: 8.2.18
 
@@ -41,10 +41,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(8, 'Chiquita Fulton', 'piwotuho@mailinator.com', '$2y$10$w5dUl8AMxxVNvhRWdKaa1emRdZU0nDjERtmrm38HRrBdzQR0M32WW', NULL, NULL),
-(9, 'Camilla Mendoza', 'qafivo@mailinator.com', '$2y$10$lNsThGF1sT5f.ieMR5CXMOEIWta5UkAKcLfIP9MaVzmsSZAbzOcVi', NULL, NULL),
-(10, 'Leo Reilly', 'qaqa@mailinator.com', '$2y$10$Rjfql2jpky84ziIihCaw1.ozAnu0PBVx5xJ7kTh.JSj9av47Gkx/W', NULL, NULL),
-(11, 'Uma Barton', 'fuvulydub@mailinator.com', '$2y$10$y.e3XjMHKtBj5at.d1LAT.qh6RAoBsV4Zau9j1NHYUieMnRPFvy3a', '2024-09-22 13:29:41', '2024-09-22 13:29:41');
+(1, 'User 1', 'user1@mail.com', '$2y$10$ZbI5reOAvGawfxElq1EgC.FWQyXeRwRTuBFiPEPCtmgVbQGA.pKmW', NULL, NULL),
+(2, 'User 2', 'user2@mail.com', '$2y$10$7ae4/n1rUwbTO5VJaatEWOelitm/48xM/xfGYxsgjfyiHMW/UhpsG', NULL, NULL),
+(4, 'User 3', 'user3@mail.com', '$2y$10$VCHrB8xQ3Oz48OvyC61CzexhSdx.5R43i0.nbqw69QWpqKGxU.wKm', NULL, NULL);
 
 --
 -- Индексы сохранённых таблиц
@@ -54,7 +53,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `updated_a
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT для сохранённых таблиц
@@ -64,7 +64,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
