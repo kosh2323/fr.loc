@@ -10,3 +10,11 @@ Line: 12
 File: D:\Server6\OSPanel\home\fr.loc\app\Controllers\UserController.php
 Line: 12
 ================
+[2024-10-31 18:28:03] Error: SMTP Error: Could not authenticate.
+File: D:\OSPanel\home\fr.loc\vendor\phpmailer\phpmailer\src\PHPMailer.php
+Line: 2261
+================
+[2024-10-31 18:35:38] Error: SMTP Error: Could not authenticate.
+File: D:\OSPanel\home\fr.loc\vendor\phpmailer\phpmailer\src\PHPMailer.php
+Line: 2261
+================

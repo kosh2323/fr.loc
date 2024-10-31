@@ -29,6 +29,20 @@ const DB_SETTINGS = [
     ],
 ];
 
+const MAIL_SETTINGS = [
+    'host' => 'sandbox.smtp.mailtrap.io', // smtp.gmail.com
+    'auth' => true,
+    'username' => '42f5c5b4a04a1b', // your_email@gmail.com
+    'password' => '8322aa7052f68c', // xxxx xxxx xxxx xxxx
+    'secure' => 'tls', // ssl
+    'port' => 587,
+    'from_email' => '14a67b235b-387941@inbox.mailtrap.io', // your_email@gmail.com
+    'from_name' => 'My Framework',
+    'is_html' => true,
+    'charset' => 'UTF-8',
+    'debug' => 0, // 0 - 4
+];
+
 const PAGINATION_SETTINGS = [
     'perPage' => 3,
     'midSize' => 2,
