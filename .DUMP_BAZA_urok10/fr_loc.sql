@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: MariaDB-11.2
--- Время создания: Ноя 11 2024 г., 11:58
+-- Время создания: Ноя 11 2024 г., 12:14
 -- Версия сервера: 11.2.2-MariaDB
 -- Версия PHP: 8.2.18
 
@@ -118,7 +118,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `updated_a
 (27, 'Dylan Christensen', 'wame@mailinator.com', '$2y$10$B8EAyvEj2Yx5VSWpqy1Lyus3o7l6E8wj5Xv01ZG9ZAIyeqfDuY1Bu', NULL, NULL),
 (28, 'Dominique Gilliam', 'desik@mailinator.com', '$2y$10$WsWqDCvLPVHisJndkytQT.J5FzFWcjEwiqewEFn/FZvY0hqcP2HWK', NULL, NULL),
 (29, 'Tamekah Hubbard', 'zebisumexa@mailinator.com', '$2y$10$E5TcOqEjbdsTbeEdOn18KOjk/YZIDisGM4TNxM2TVdiIeFrz5EVOe', NULL, NULL),
-(30, 'admin', 'admin@mail.com', 'e10adc3949ba59abbe56e057f20f883e', NULL, NULL);
+(30, 'admin', 'admin@mail.com', '$2y$10$BJJ07Uy0rFMHpGESBJz78OXZIM00v6pcEQEXx3Sw3/0QSRHnb6hlW', NULL, NULL);
 
 --
 -- Индексы сохранённых таблиц
