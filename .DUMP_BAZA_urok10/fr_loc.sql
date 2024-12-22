@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: MariaDB-11.2
--- Время создания: Ноя 11 2024 г., 12:14
+-- Время создания: Дек 22 2024 г., 16:24
 -- Версия сервера: 11.2.2-MariaDB
 -- Версия PHP: 8.2.18
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- База данных: `fr_loc`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `slug` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `categories`
+--
+
+INSERT INTO `categories` (`id`, `title`, `slug`) VALUES
+(1, 'Category 1', 'category-1'),
+(2, 'Category 2', 'category-2'),
+(3, 'Category 3', 'category-3'),
+(4, 'Category 4', 'category-4');
 
 -- --------------------------------------------------------
 
@@ -117,12 +139,18 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `updated_a
 (26, 'Blake Chandler', 'vize@mailinator.com', '$2y$10$nxN7uHhHTQDcKXDlLqEXcuMsD7.H7PZdarqAMUvPVHwO/tPsdox/e', NULL, NULL),
 (27, 'Dylan Christensen', 'wame@mailinator.com', '$2y$10$B8EAyvEj2Yx5VSWpqy1Lyus3o7l6E8wj5Xv01ZG9ZAIyeqfDuY1Bu', NULL, NULL),
 (28, 'Dominique Gilliam', 'desik@mailinator.com', '$2y$10$WsWqDCvLPVHisJndkytQT.J5FzFWcjEwiqewEFn/FZvY0hqcP2HWK', NULL, NULL),
-(29, 'Tamekah Hubbard', 'zebisumexa@mailinator.com', '$2y$10$E5TcOqEjbdsTbeEdOn18KOjk/YZIDisGM4TNxM2TVdiIeFrz5EVOe', NULL, NULL),
-(30, 'admin', 'admin@mail.com', '$2y$10$BJJ07Uy0rFMHpGESBJz78OXZIM00v6pcEQEXx3Sw3/0QSRHnb6hlW', NULL, NULL);
+(29, 'Tamekah Hubbard', 'zebisumexa@mailinator.com', '$2y$10$E5TcOqEjbdsTbeEdOn18KOjk/YZIDisGM4TNxM2TVdiIeFrz5EVOe', NULL, NULL);
 
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `slug` (`slug`);
 
 --
 -- Индексы таблицы `posts`
@@ -149,6 +177,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT для таблицы `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT для таблицы `posts`
 --
 ALTER TABLE `posts`
@@ -158,7 +192,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
