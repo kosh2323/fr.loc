@@ -7,6 +7,7 @@ use PHPFramework\Controller;
 class BaseController extends Controller
 {
 
+
     public function __construct()
     {
         /*if (!$menu = cache()->get('menu')) {
@@ -14,9 +15,12 @@ class BaseController extends Controller
         }*/
     }
 
-    public function renderMenu(): string
+    public function renderMenu()
     {
+
         return view()->renderPartial('incs/menu');
+
     }
 
 }
+//добавлено для теста
