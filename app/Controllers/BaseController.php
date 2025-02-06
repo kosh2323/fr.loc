@@ -23,4 +23,4 @@ class BaseController extends Controller
     }
 
 }
-//добавлено для теста
+//добавлено для теста ещё кое-чего
