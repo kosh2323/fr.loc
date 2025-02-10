@@ -1,6 +1,6 @@
 <div class="container">
     <h2>Contact page</h2>
-<h3>Form here</h3>
+<h3>Form here here form</h3>
     <form action="<?= base_href('/contact'); ?>" method="post" enctype="multipart/form-data">
         <?= get_csrf_field(); ?>
 
